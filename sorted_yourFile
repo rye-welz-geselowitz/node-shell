@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+	
+		commands[done.cmdList[0]](output,null,done);
+		process.stdout.write('\nprompt > ');
+		process.stdout.write(output);
+	done.cmdList.shift();
+	else{
+	if(done.cmdList.length===0){
+	}
+	}
+  // 	process.stdout.write('\n'+process.cwd()+'\n');
+  // 	process.stdout.write(new Date());
+  // if(cmd === 'date') {
+  // if(cmd === 'pwd') {
+  // }
+  // }
+  //commands.date(cmd);
+  //commands.pwd(cmd);
+  //console.log(commands[cmd]());
+  //process.stdout.write('You typed: ' + cmd);
+  commands[cmd](null,input, done);
+  console.log(cmd);
+  done.cmdList=cmdList;
+  var args_arr=cmdList[0].split(' ');
+  var cmd=args_arr.shift();
+  var cmdList = cmdString.split(/\s*\|\s*/g);
+  var cmdString = data.toString().trim();
+  var input=args_arr.join(" ");
+//  var cmd = data.toString().trim(); // remove the newline
+// Output a prompt
+// The stdin 'data' event fires after a user types in a line
+// console.log(Object.keys(process));
+// console.log(process);
+process.stdin.on('data', function (data) {
+process.stdout.write('prompt > ');
+var commands = require('./commands.js');
+var done = function(output) {
+}
+});
